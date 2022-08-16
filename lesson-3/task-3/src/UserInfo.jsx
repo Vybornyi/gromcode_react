@@ -3,8 +3,6 @@ import moment from 'moment';
 import Avatar from './Avatar';
 import './comment.scss';
 
-const formatDate = date => moment(date).format('DD MMM YYYY');
-
 const UserInfo = props => {
   return (
     <>
@@ -13,7 +11,7 @@ const UserInfo = props => {
         <div className="user-info__name">{props.user.name}</div>
       </div>
       <div className="comment__text">{props.text}</div>
-      <div className="comment__date">{formatDate(props.date)}</div>
+      <div className="comment__date">{props.date}</div>
     </>
   );
 };
