@@ -14,7 +14,7 @@ const userInfo = props => {
         <div className="user-info__name">{props.user.name}</div>
       </div>
       <div className="comment__text">{props.text}</div>
-      <div className="comment__date">{formatDate(props)}</div>
+      <div className="comment__date">{formatDate(props.date)}</div>
     </div>
   );
 };
