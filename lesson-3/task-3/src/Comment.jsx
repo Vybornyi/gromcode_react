@@ -4,11 +4,7 @@ import './comment.scss';
 import UserInfo from './UserInfo';
 
 function Comment(props) {
-  return (
-    <div className="comment">
-      <UserInfo user={props.author} text={props.text} />
-    </div>
-  );
+  return <UserInfo user={props.author} text={props.text} />;
 }
 
 export default Comment;
