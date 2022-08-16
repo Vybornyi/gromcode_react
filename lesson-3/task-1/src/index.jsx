@@ -6,7 +6,7 @@ import Search from './search';
 
 const rootElement = document.querySelector('#root');
 
-function Greeting(props) {
+const Greeting = props => {
   return <Search name={props.name} />;
-}
+};
 ReactDOM.render(<Greeting name="Tom" />, rootElement);
