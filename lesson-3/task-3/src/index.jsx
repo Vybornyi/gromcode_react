@@ -8,7 +8,4 @@ const userInfo = {
   name: 'Tom',
   avatarUrl: 'https://avatars.githubusercontent.com/u/97849834?v=4',
 };
-ReactDOM.render(
-  <Comment author={userInfo} text="Good job!" date={new Date('2001-01-01T11:11:11.819Z')} />,
-  rootElement,
-);
+ReactDOM.render(<Comment author={userInfo} text="Good job!" date={new Date()} />, rootElement);
