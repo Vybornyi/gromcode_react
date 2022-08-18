@@ -5,7 +5,7 @@ import './clock.scss';
 const getTimeWithOffset = offset => {
   const currentTime = new Date();
   const utcOffset = currentTime.getTimezoneOffset() / 60;
-  return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
+  return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset + 1));
 };
 const formatDate = date => moment(date).format('h:mm:ss a');
 
