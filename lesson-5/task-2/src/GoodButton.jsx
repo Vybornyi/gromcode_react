@@ -2,13 +2,13 @@ import React from 'react';
 import './index.scss';
 
 class GoodButton extends React.Component {
-  buttonCklick() {
-    alert('sf');
+  buttonClick(e) {
+    alert(e.target.textContent);
   }
 
   render() {
     return (
-      <button className="fancy-button" onClick={buttonCklick}>
+      <button className="fancy-button" onClick={this.buttonClick}>
         Click Me
       </button>
     );
