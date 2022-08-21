@@ -10,12 +10,11 @@ class Toggler extends React.Component {
   }
 
   changeStatus = e => {
-    console.log(e.target.textContent);
-    if (e.target.textContent === 'On') {
+    if (e.target.textContent === 'On status here') {
       this.setState({
         status: 'Off',
       });
-    } else if (e.target.textContent === 'Off') {
+    } else if (e.target.textContent === 'Off status here') {
       this.setState({
         status: 'On',
       });
@@ -25,7 +24,7 @@ class Toggler extends React.Component {
   render() {
     return (
       <div onClick={this.changeStatus} className="toggler">
-        {this.state.status}
+        {`${this.state.status} status here`}
       </div>
     );
   }
