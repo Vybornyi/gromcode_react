@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-class Toogler extends React.Component {
+class Toggler extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,4 +26,4 @@ class Toogler extends React.Component {
   }
 }
 
-export default Toogler;
+export default Toggler;
