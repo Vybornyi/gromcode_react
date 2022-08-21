@@ -11,9 +11,9 @@ class Toogler extends React.Component {
 
   changeStatus = e => {
     let value;
-    if (e.target.textContent === 'On') {
-      value = 'Off';
-    } else value = 'On';
+    if (e.target.textContent === 'Off') {
+      value = 'On';
+    } else value = 'Off';
     this.setState({
       status: value,
     });
