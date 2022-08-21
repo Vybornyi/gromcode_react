@@ -1,33 +1,44 @@
 import React from 'react';
 import './index.scss';
 
-class Toggler extends React.Component {
+class ColorPicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: 'Off',
+      color: '',
     };
   }
 
-  changeStatus = e => {
-    if (e.target.textContent === 'On status here') {
-      this.setState({
-        status: 'Off status here',
-      });
-    } else if (e.target.textContent === 'Off' || e.target.textContent === 'Off status here') {
-      this.setState({
-        status: 'On status here',
-      });
-    }
+  showColorText = color => {
+    this.setState({
+      color,
+    });
   };
 
   render() {
     return (
-      <button onClick={this.changeStatus} className="toggler">
-        {this.state.status}
-      </button>
+      <div>
+        <div className="picker__title">{this.state.color}</div>
+        <div>
+          <button
+            onMouseEnter={() => this.showColorText('Coral')}
+            onMouseLeave={() => this.showColorText('')}
+            className="picker__button picker__button_coral"
+          ></button>
+          <button
+            onMouseEnter={() => this.showColorText('Aqua')}
+            onMouseLeave={() => this.showColorText('')}
+            className="picker__button picker__button_aqua"
+          ></button>
+          <button
+            onMouseEnter={() => this.showColorText('Bisque')}
+            onMouseLeave={() => this.showColorText('')}
+            className="picker__button picker__button_bisque"
+          ></button>
+        </div>
+      </div>
     );
   }
 }
 
-export default Toggler;
+export default ColorPicker;
