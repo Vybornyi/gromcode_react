@@ -1,10 +1,6 @@
 import React from 'react';
 import './index.scss';
 
-const RED = '#f00';
-const GREEN = '#0f0';
-const BLUE = '#00f';
-
 class Colors extends React.Component {
   setBodyColor = color => {
     document.body.style.backgroundColor = color;
@@ -13,12 +9,18 @@ class Colors extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.setBodyColor(RED)} style={{ backgroundColor: RED }}></button>
         <button
-          onClick={() => this.setBodyColor(GREEN)}
-          style={{ backgroundColor: GREEN }}
+          onClick={() => this.setBodyColor('#f00')}
+          style={{ backgroundColor: '#f00' }}
         ></button>
-        <button onClick={() => this.setBodyColor(BLUE)} style={{ backgroundColor: BLUE }}></button>
+        <button
+          onClick={() => this.setBodyColor('#0f0')}
+          style={{ backgroundColor: '#0f0' }}
+        ></button>
+        <button
+          onClick={() => this.setBodyColor('#00f')}
+          style={{ backgroundColor: '#00f' }}
+        ></button>
       </div>
     );
   }
