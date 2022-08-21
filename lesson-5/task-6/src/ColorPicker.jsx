@@ -9,10 +9,16 @@ class Toggler extends React.Component {
     };
   }
 
-  changeStatus = () => {
-    this.setState({
-      status: this.state.status === 'Off' ? 'On' : 'Off',
-    });
+  changeStatus = e => {
+    if (e.target.textContent === 'On status here') {
+      this.setState({
+        status: 'Off status here',
+      });
+    } else if (e.target.textContent === 'Off' || e.target.textContent === 'Off status here') {
+      this.setState({
+        status: 'On status here',
+      });
+    }
   };
 
   render() {
