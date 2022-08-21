@@ -21,9 +21,9 @@ class Toogler extends React.Component {
 
   render() {
     return (
-      <div onClick={this.changeStatus} className="toggler">
+      <button onClick={this.changeStatus} className="toggler">
         {this.state.status}
-      </div>
+      </button>
     );
   }
 }
