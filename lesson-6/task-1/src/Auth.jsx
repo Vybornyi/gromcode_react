@@ -19,14 +19,12 @@ class Auth extends React.Component {
     this.setState({
       isLoggedIn: true,
     });
-    console.log(this.state.isLoggedIn);
   }
 
   handleLogout() {
     this.setState({
       isLoggedIn: false,
     });
-    console.log(this.state.isLoggedIn);
   }
 
   render() {
@@ -39,7 +37,7 @@ class Auth extends React.Component {
     return (
       <div className="panel">
         <Greeting isLoggedIn={this.state.isLoggedIn} />
-        <div>{button}</div>
+        {button}
       </div>
     );
   }
