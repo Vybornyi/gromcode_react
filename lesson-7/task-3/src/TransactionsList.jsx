@@ -5,7 +5,14 @@ import './index.scss';
 const TransactionsList = ({ transactions }) => (
   <ul className="transactions">
     {transactions.map(transaction => (
-      <Transaction key={transaction.id} {...transaction} amount={transaction.amount} />
+      <Transaction
+        key={transaction.id}
+        from={transaction.from}
+        to={transaction.to}
+        amount={transaction.amount}
+        rate={transaction.rate}
+        time={transaction.time}
+      />
     ))}
   </ul>
 );
