@@ -34,7 +34,7 @@ class UsersList extends React.Component {
         </button>
         <ul className="users">
           {sortUsers.map(user => (
-            <User key={user.id} name={user.name} age={user.age} />
+            <User key={user.id} {...user} />
           ))}
         </ul>
       </div>
