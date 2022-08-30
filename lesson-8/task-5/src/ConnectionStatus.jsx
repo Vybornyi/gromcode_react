@@ -3,7 +3,7 @@ import './index.scss';
 
 export default class ConnectionStatus extends React.Component {
   state = {
-    status: 'online',
+    status: 'Online',
   };
 
   componentDidMount() {
@@ -18,7 +18,7 @@ export default class ConnectionStatus extends React.Component {
 
   updateStatus = () => {
     this.setState({
-      status: navigator.onLine ? 'online' : 'offline',
+      status: navigator.onLine ? 'Online' : 'Offline',
     });
   };
 
@@ -26,7 +26,7 @@ export default class ConnectionStatus extends React.Component {
     return (
       <div
         className={
-          this.state.status === 'online' ? 'status status_online' : 'status status_offline'
+          this.state.status === 'Online' ? 'status status_online' : 'status status_offline'
         }
       >
         {this.state.status}
