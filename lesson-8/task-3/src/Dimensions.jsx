@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-export default class Demensions extends React.Component {
+export default class Dimensions extends React.Component {
   state = {
     width: null,
     height: null,
