@@ -14,8 +14,7 @@ export default class Life extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState);
-    console.log(' shouldComponentUpdate(nextProps, nextState):decide to render or not to render');
+    console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
     return nextState.number > 50;
   }
 
@@ -24,7 +23,7 @@ export default class Life extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount(): cleanup before DOM related to component will removed ');
+    console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
   }
 
   tooggleStatus = () => {
