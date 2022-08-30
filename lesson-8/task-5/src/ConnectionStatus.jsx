@@ -18,7 +18,7 @@ export default class ConnectionStatus extends React.Component {
 
   updateStatus = () => {
     this.setState({
-      status: this.state.status === 'offline' ? 'online' : 'offline',
+      status: this.state.status === 'online' ? 'offline' : 'online',
     });
   };
 
