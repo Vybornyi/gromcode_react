@@ -33,6 +33,7 @@ export default class Life extends React.Component {
   };
 
   render() {
+    console.log('return React element to build DOM');
     return (
       <>
         <div>{this.state.number}</div>
