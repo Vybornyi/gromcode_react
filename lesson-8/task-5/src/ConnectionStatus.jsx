@@ -13,18 +13,12 @@ export default class ConnectionStatus extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('online', this.updateStatus);
-    window.removeEventListener('offline', this.updateStatusOffline);
+    window.removeEventListener('offline', this.updateStatus);
   }
 
   updateStatus = () => {
     this.setState({
-      status: navigator.onLine ? 'online' : 'offline',
-    });
-  };
-
-  updateStatusOffline = () => {
-    this.setState({
-      status: 'offline',
+      status: this.state.status === 'offline' ? 'online' : 'offline',
     });
   };
 
