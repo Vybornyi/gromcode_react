@@ -1,0 +1,35 @@
+import React from 'react';
+import './index.scss';
+
+export default class User extends React.Component {
+  state = {
+    user: null,
+  };
+
+  componentDidMount() {
+    fetch(`https://api.github.com/users/${this.props.userId}`)
+      .then(response => response.json())
+      .then(data =>
+        this.setState({
+          user: data,
+        }),
+      );
+  }
+
+  render() {
+    const { user } = this.state;
+    if (!user) {
+      return null;
+    }
+    const { avatar_url, location, login } = user;
+    return (
+      <div className="user">
+        <img alt="User Avatar" src={avatar_url} className="user__avatar" />
+        <div className="user__info">
+          <span className="user__name">{login}</span>
+          <span className="user__location">{location}</span>
+        </div>
+      </div>
+    );
+  }
+}
