@@ -24,11 +24,7 @@ export default class ConnectionStatus extends React.Component {
 
   render() {
     return (
-      <div
-        className={
-          this.state.status === 'online' ? 'status status_online' : 'status status_offline'
-        }
-      >
+      <div className={this.state.status === 'online' ? 'status ' : 'status status_offline'}>
         {this.state.status}
       </div>
     );
