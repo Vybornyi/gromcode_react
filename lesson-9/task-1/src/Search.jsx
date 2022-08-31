@@ -16,7 +16,7 @@ export default class Search extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    alert(this.state.value);
+    alert(`Search text: ${this.state.value}`);
   };
 
   render() {
