@@ -7,8 +7,7 @@ export default class UserForm extends React.Component {
       ...acc,
       [name]: value,
     }));
-    console.log(formData);
-    this.props.onSubmit(this.state);
+    this.props.onSubmit(formData);
   };
 
   setRef = node => {
