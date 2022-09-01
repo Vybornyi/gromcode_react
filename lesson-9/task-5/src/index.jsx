@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Game from './Game';
 import './index.scss';
-import Life from './Life';
 
 const rootElement = document.querySelector('#root');
-ReactDOM.render(<Life />, rootElement);
+ReactDOM.render(<Game />, rootElement);
