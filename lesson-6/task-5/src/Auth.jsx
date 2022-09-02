@@ -12,14 +12,6 @@ class Auth extends React.Component {
     };
   }
 
-  handleSpinner = () => {
-    setTimeout(() => {
-      this.setState({
-        isLoggedIn: true,
-      });
-    }, 2000);
-  };
-
   handleLogin = () => {
     this.setState({
       isLoggedIn: 'Spinner',
