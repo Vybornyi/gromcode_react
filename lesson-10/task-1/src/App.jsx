@@ -5,7 +5,7 @@ import UserMenu from './UserMenu';
 
 export default class App extends React.Component {
   state = {
-    user: null,
+    userData: null,
   };
 
   componentDidMount() {
@@ -15,24 +15,24 @@ export default class App extends React.Component {
   fetchUser(userId) {
     fetch(`https://api.github.com/users/${userId}`)
       .then(response => response.json())
-      .then(data => {
+      .then(userData => {
         this.setState({
-          user: data,
+          userData,
         });
       });
   }
 
   render() {
-    if (!this.state.user) {
+    if (!this.state.userData) {
       return null;
     }
     return (
       <div className="page">
         <header className="header">
-          <UserMenu userData={this.state.user} />
+          <UserMenu userData={this.state.userData} />
         </header>
 
-        <UserProfile userData={this.state.user} />
+        <UserProfile userData={this.state.userData} />
       </div>
     );
   }
