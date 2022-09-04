@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import ShoppingCart from './ShopingCart';
+import ShoppingCart from './ShoppingCart';
 import Profile from './Profile';
 
 export default class App extends React.Component {
