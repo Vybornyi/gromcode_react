@@ -1,9 +1,8 @@
 import React from 'react';
 
-const BoilingVerdict = ({ celsium }) => {
-  if (celsium >= 100) {
+export default function BoilingVerdict(props) {
+  if (props.celsius >= 100) {
     return <p>The water would boil.</p>;
   }
   return <p>The water would not boil.</p>;
-};
-export default BoilingVerdict;
+}
