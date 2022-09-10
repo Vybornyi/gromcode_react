@@ -1,13 +1,33 @@
 import React from 'react';
-import FilterableProductTable from './FilterableProductTable';
+import './index.scss';
+import Expand from './Expand';
 
-const PRODUCTS = [
-  { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
-  { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
-  { category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball' },
-  { category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch' },
-  { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
-  { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' },
-];
-const App = () => <FilterableProductTable products={PRODUCTS} />;
+class App extends React.Component {
+  state = {
+    isVisible: false,
+  };
+
+  toogleContent = () => {
+    this.setState({
+      isVisible: !this.state.isVisible,
+    });
+  };
+
+  render() {
+    const childrenElem = (
+      <p>
+        Hooks are a new addition in React 16.8. They let you use state and other React features
+        without writing a class.
+      </p>
+    );
+    return (
+      <div className="app">
+        <Expand onToogle={this.toogleContent} isVisible={this.state.isVisible} title="Some title">
+          {childrenElem}
+        </Expand>
+      </div>
+    );
+  }
+}
+
 export default App;
