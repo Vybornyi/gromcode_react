@@ -1,13 +1,38 @@
 import React from 'react';
-import FilterableProductTable from './FilterableProductTable';
+import Dialog from './Dialog';
+import './index.scss';
 
-const PRODUCTS = [
-  { category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
-  { category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
-  { category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball' },
-  { category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch' },
-  { category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
-  { category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' },
-];
-const App = () => <FilterableProductTable products={PRODUCTS} />;
+class App extends React.Component {
+  state = {
+    isOpen: false,
+  };
+
+  hideDialog = () => {
+    this.setState({
+      isOpen: false,
+    });
+  };
+
+  showDialog = () => {
+    this.setState({
+      isOpen: true,
+    });
+  };
+
+  render() {
+    const childElem = (
+      <p>Use immutable array methods to work with data. It will help to avoid bugs</p>
+    );
+    return (
+      <div className="app">
+        <button onClick={this.showDialog} className="btn">
+          Show dialog
+        </button>
+        <Dialog isOpen={this.state.isOpen} title="Recommendation" onClose={this.hideDialog}>
+          {childElem}
+        </Dialog>
+      </div>
+    );
+  }
+}
 export default App;
