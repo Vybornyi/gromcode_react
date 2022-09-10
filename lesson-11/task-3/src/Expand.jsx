@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Expand = ({ isVisible, children, title, onToogle }) => {
-  const childrenElem = isVisible ? children : null;
   const arrowDirection = isVisible ? 'up' : 'down';
   return (
     <div className="expand border">
@@ -11,7 +10,7 @@ const Expand = ({ isVisible, children, title, onToogle }) => {
           <i className={`fas fa-chevron-${arrowDirection}`}></i>
         </button>
       </div>
-      <div className="expand__content">{childrenElem}</div>
+      <div className="expand__content">{isVisible ? children : null}</div>
     </div>
   );
 };
