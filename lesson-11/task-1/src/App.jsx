@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import './index.scss';
 import Numbers from './Numbers';
-import OddNumber from './OddNumber';
+import OddNumbers from './OddNumbers';
 import EvenNumbers from './EvenNumbers';
 
 class App extends PureComponent {
@@ -24,7 +24,7 @@ class App extends PureComponent {
   render() {
     return (
       <div className="app">
-        <OddNumber title="Odd number" number={this.state.number} />
+        <OddNumbers title="Odd number" number={this.state.number} />
         <EvenNumbers title="Even number" number={this.state.number} />
         <Numbers title="All numbers" number={this.state.number} />
         <Numbers title="Just 17" number={17} />

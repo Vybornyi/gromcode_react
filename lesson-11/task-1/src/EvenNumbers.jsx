@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-export default class EvenNumbers extends PureComponent {
+export default class EvenNumbers extends React.Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.number % 2 === 1;
   }
