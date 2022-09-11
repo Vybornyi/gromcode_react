@@ -8,6 +8,10 @@ class TasksList extends React.Component {
     tasks: [],
   };
 
+  componentDidMount() {
+    this.fetchTasks();
+  }
+
   fetchTasks = () => {
     fetchTasksList().then(tasksList =>
       this.setState({
