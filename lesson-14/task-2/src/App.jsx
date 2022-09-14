@@ -18,6 +18,9 @@ const App = () => (
             </li>
           </ul>
         </Route>
+        <Route exact path="/">
+          <span>Select a user please</span>
+        </Route>
         <Route path={'/users/:userId'} component={User} />
       </div>
     </BrowserRouter>
