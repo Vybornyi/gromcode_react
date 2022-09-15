@@ -32,11 +32,6 @@ const usersList = [
     age: 6,
     id: 6,
   },
-  {
-    name: 'Kolia',
-    age: 7,
-    id: 7,
-  },
 ];
 
 const App = () => <UsersList users={usersList} />;
