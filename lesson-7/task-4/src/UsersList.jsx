@@ -17,10 +17,6 @@ class UsersList extends React.Component {
   };
 
   handlerPrevPage = () => {
-    const { currentPage } = this.state;
-    if (currentPage === 1) {
-      return null;
-    }
     this.setState({ currentPage: this.state.currentPage - 1 });
   };
 
