@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
-import Counter from './Counter';
+import Demensions from './Demensions';
 
-const App = () => <Counter />;
+const App = () => <Demensions />;
 
 export default App;
